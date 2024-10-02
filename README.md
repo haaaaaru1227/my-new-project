@@ -53,3 +53,4 @@
      - バックエンド: Ruby on Rails
      - データベース: MySQL
      - API設計: `GET /api/summary`: 診断とカウンセリング情報のまとめを取得
+
