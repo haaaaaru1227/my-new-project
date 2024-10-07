@@ -108,3 +108,7 @@ Figma：https://www.figma.com/board/Uv7zOf7NE2IYofRt5cOGV3/Untitled?node-id=0-1&
 ### 各画面の作り込み
 画面遷移だけでなく、必要なボタンやフォームが確認できるくらい作り米ているか？
 - [ ] 作り込みはある程度完了している（Figmaを見て画面の作成ができる状態にある）
+
+### ER図
+（ER図のスクリーンショットの画像）
+https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fhaaaaaru1227%2Fmy-new-project%2Fadd-feature%2F%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio
