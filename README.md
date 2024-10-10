@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Hair Counseling
 ## サービス概要
 **Hair Counseling**は、美容室でのカウンセリングを効率化し、お客様に最適なスタイルやメニューの提案をサポートするサービスです。美容師が短時間でお客様のイメージを的確に共有できるようになり、施術の満足度を向上させます。これにより、リピート率の向上や収益アップを目指します。
@@ -111,8 +110,7 @@ Figma：https://www.figma.com/board/Uv7zOf7NE2IYofRt5cOGV3/Untitled?node-id=0-1&
 - [ ] 作り込みはある程度完了している（Figmaを見て画面の作成ができる状態にある）
 
 ### ER図
-（ER図のスクリーンショットの画像）
-https://app.diagrams.net/?title=%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fhaaaaaru1227%2Fmy-new-project%2Fadd-feature%2F%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio
+https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio#Uhttps%3A%2F%2Fraw.githubusercontent.com%2Fhaaaaaru1227%2Fmy-new-project%2Fadd-feature%2F%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB.drawio
 
 ### 本サービスの概要
 
@@ -133,5 +131,3 @@ https://app.diagrams.net/?title=%E5%90%8D%E7%A7%B0%E6%9C%AA%E8%A8%AD%E5%AE%9A%E3
 ---
 
 このシステムにより、美容師と顧客の情報共有を効率化し、顧客にとって満足度の高い美容体験を実現することを目指しています。
-=======
->>>>>>> main
