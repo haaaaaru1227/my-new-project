@@ -1,0 +1,31 @@
+/* app/assets/stylesheets/diagnostic_test/woman.css */
+.choose_box {
+  /* スタイルをここに追加 */
+}
+
+.app-theme h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.question-box ul {
+  list-style-type: none;
+}
+
+.question-box li {
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #5a9abf;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #497f9b;
+}

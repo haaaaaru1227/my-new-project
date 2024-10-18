@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ヘアカウンセリング診断</title>
+  <meta charset="utf-8">
+  <%= stylesheet_link_tag 'diagnostic_test/woman', media: 'all', rel: 'preload', as: 'style' %>
+</head>
+<body>
+  <div class="choose_box">
+    <div class="app-theme">
+      <h1>あなたにぴったりのヘアスタイルを見つける診断（全<%= @questions.size %>問）</h1>
+    </div>
+
+    <div class="question-box">
+      <% @questions.each_with_index do |question, index| %>
+        <div id="<%= question[:id] %>" class="fit" <% if index != 0 %>style="display: none;"<% end %>>
+          <p><%= question[:text] %></p>
+          <ul>
+            <% question[:options].each do |option| %>
+              <li>
+                <a class="btn" href="#" data-value="<%= option %>"><%= option %></a>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+
+    <form id="result-form" action="<%= url_for(action: :result) %>" method="get" style="display: none;">
+      <input type="hidden" name="count_a" id="count_a" value="0">
+      <input type="hidden" name="count_b" id="count_b" value="0">
+      <button type="submit">診断結果を見る</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var countA = 0;
+      var countB = 0;
+      var questions = document.querySelectorAll(".fit");
+      var currentIndex = 0;
+
+      document.querySelectorAll(".btn").forEach(function(button) {
+        button.addEventListener("click", function(event) {
+          event.preventDefault();
+          var value = this.getAttribute('data-value');
+
+          if (value.includes('速い') || value.includes('キッパリ')) {
+            countA++;
+          } else {
+            countB++;
+          }
+
+          questions[currentIndex].style.display = "none";
+          currentIndex++;
+          if (currentIndex < questions.length) {
+            questions[currentIndex].style.display = "block";
+          } else {
+            document.getElementById("count_a").value = countA;
+            document.getElementById("count_b").value = countB;
+            document.getElementById("result-form").style.display = "block";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
