@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>性別を選んでください</title>
+  <meta charset="utf-8">
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'diagnostic_test', media: 'all' %>
+</head>
+<main>
+<body>
+  <div class="choose_box">
+    <div class="app-theme">
+      <h1>性別を選んでください</h1>
+    </div>
+
+<div class="gender-selection">
+  <a href="<%= diagnostic_test_woman_path %>" class="btn">女性</a>
+  <a href="<%= diagnostic_test_man_path %>" class="btn">男性</a>
+</div>
+
+</main>
+</body>

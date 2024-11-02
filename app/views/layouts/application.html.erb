@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hair Counseling</title>
-
-    <!-- Railsのアセットパイプラインを使用 -->
-    <%= stylesheet_link_tag 'styles', media: 'all' %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>haircounseling</title>
+  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_importmap_tags %>
 </head>
-<body>
-    <header>
-        <div class="logo">
-            <h1>haircounseling</h1>
-        </div>
-        <nav>
-            <a href="#" class="login-btn">スタイリストログイン</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="intro">
-            <h2>haircounseling</h2>
-            <p>お客様の髪型や髪質に合わせて最適なヘアスタイルをご提案します。カウンセリングの前に簡単に試してみてください</p>
-            <%= link_to '診断スタート！', diagnostic_test_woman_path, class: 'start-btn' %>
-        </section>
-    </main>
+  <header>
+    <div class="container">
+      <h1>haircounseling</h1>
+      <nav>
+         <a href="#" class="login-btn">スタイリストログイン</a>
+      </nav>
+    </div>
+  </header>
+<main>
 
-    <footer>
-        <ul>
-            <li><a href="#">利用規約</a></li>
-            <li><a href="#">プライバシーポリシー</a></li>
-            <li><a href="#">お問合せ</a></li>
-        </ul>
-    </footer>
-</body>
+  <!-- 各ページのコンテンツはここに表示される -->
+  <%= yield %>
+
+</main>
+  <!-- フッターをここに移動 -->
+  <footer>
+    <ul>
+      <li><a href="#">利用規約</a></li>
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">お問合せ</a></li>
+    </ul>
+  </footer>
 </html>

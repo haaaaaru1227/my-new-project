@@ -32,28 +32,6 @@ main {
   justify-content: center;
 }
 
-.hair-length-selection {
-  display: flex;
-  flex-direction: column; /* ボタンを縦に並べる */
-  align-items: center;    /* ボタンを中央揃え */
-  gap: 10px;              /* ボタン間のスペースを調整 */
-}
-
-.hair-length-selection a {
-  width: 150px;           /* ボタンの幅を固定 */
-  padding: 10px;
-  background-color: #5a9abf;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.hair-length-selection a:hover {
-  background-color: #4793b2;
-}
-
 .fit {
   background-color: #e0edf3;
   padding: 20px;
@@ -83,20 +61,6 @@ ul li a {
   display: inline-block;
 }
 
-
-/* ボタンの共通スタイル */
-.btn {
-  background-color: #87bdd8; /* 背景色 */
-  color: white; /* テキスト色 */
-  padding: 10px 20px; /* ボタンの内側余白 */
-  margin: 10px; /* ボタン同士の間隔 */
-  border-radius: 5px; /* 角の丸み */
-  text-decoration: none; /* リンクの下線を消す */
-  font-size: 1.2rem; /* テキストサイズ */
-/* テキストの太さ */
-  display: inline-block; /* ボタンをブロック要素のように表示 */
-  text-align: center; /* テキストを中央揃え */
-}
 
 
 /* 診断結果フォームのスタイル */

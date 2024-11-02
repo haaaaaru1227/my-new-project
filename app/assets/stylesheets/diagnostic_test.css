@@ -1,0 +1,24 @@
+.gender-selection {
+  display: flex;
+  flex-direction: column; /* ボタンを縦に並べる */
+  align-items: center;    /* ボタンを中央に揃える */
+  margin-top: 50px;
+  gap: 20px;              /* ボタン間のスペースを調整 */
+}
+
+.gender-selection .btn {
+  display: block;         /* ボタンをブロック要素に */
+  padding: 10px 20px;
+  background-color: #87bdd8;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  width: 200px;           /* ボタンの幅を固定 */
+  text-align: center;     /* テキストを中央揃え */
+}
+
+.gender-selection .btn:hover {
+  background-color: #87bdd8;
+}
+

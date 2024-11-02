@@ -1,0 +1,62 @@
+/* 共通のヘッダーとフッタースタイル */
+
+header {
+  background-color: #87bdd8;
+  padding: 10px 0;
+}
+
+header .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #ffffff;
+  font-size: 2.5rem;
+}
+
+header .login-btn {
+  background-color: white;
+  color: #87bdd8;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* フッターのスタイル */
+footer {
+  background-color: #87bdd8;
+  padding: 20px;
+  text-align: center;
+}
+
+/* リンクをフラットに、間隔を調整 */
+footer ul {
+  list-style: none;
+  display: inline-block; /* フッターリンクを中央に配置 */
+  padding: 0;
+  margin: 0;
+}
+
+
+footer ul li {
+  display: inline;
+  margin: 0 15px; /* 各リンクの間隔 */
+}
+
+
+footer ul li a {
+  text-decoration: none;
+  background-color: transparent; 
+  color: white;
+}
+
+/* ホバー時に下線を表示 */
+footer ul li a:hover {
+  text-decoration: underline;
+}

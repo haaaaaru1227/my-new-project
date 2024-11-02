@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "@babel/preset-react": "^7.25.9",
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@hotwired/turbo-rails": "^8.0.12",
+    "@mui/material": "^6.1.5",
+    "@rails/webpacker": "5.4.4",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.1",
+    "react-scripts": "^3.0.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4",
+    "yargs-parser": "^21.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^5.1.0"
+  }
+}

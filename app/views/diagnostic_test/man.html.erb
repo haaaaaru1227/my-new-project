@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>ヘアカウンセリング診断</title>
+  <meta charset="utf-8">
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'diagnostic_test/man', media: 'all' %>
+</head>
+<main>
+<body>
+  <div class="choose_box">
+    <div class="app-theme">
+      <h1>あなたにぴったりのヘアスタイルを見つける診断（全<%= @questions.size %>問）</h1>
+    </div>
+<% question[:options].each do |option| %>
+  <li>
+    <button class="btn" data-question-id="<%= question[:id] %>" data-answer="<%= option[:text] %>" data-group="<%= option[:group] %>">
+      <%= option[:text] %>
+    </button>
+  </li>
+<% end %>
+
+</div>
+  </main>
+    <!-- 結果表示のフォーム -->
+    <form id="result-form" action="<%= url_for(action: :result) %>" method="get" style="display: none;">
+      <input type="hidden" name="count_a" id="count_a" value="0">
+      <input type="hidden" name="count_b" id="count_b" value="0">
+      <button type="submit">診断結果を見る</button>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var countA = 0;
+      var countB = 0;
+      var questions = document.querySelectorAll(".fit");
+      var currentIndex = 0;
+
+      // すべてのボタンにクリックイベントを設定
+      document.querySelectorAll(".btn").forEach(function(button) {
+        button.addEventListener("click", function(event) {
+          event.preventDefault();
+          var value = this.getAttribute('data-value');
+
+          // 回答に応じてカウント
+          if (value.includes('速い') || value.includes('キッパリ')) {
+            countA++;
+          } else {
+            countB++;
+          }
+
+          // 現在の質問を非表示にして次の質問を表示
+          questions[currentIndex].style.display = "none";
+          currentIndex++;
+          if (currentIndex < questions.length) {
+            questions[currentIndex].style.display = "block";
+          } else {
+            // 質問が終わったら結果フォームを表示
+            document.getElementById("count_a").value = countA;
+            document.getElementById("count_b").value = countB;
+            document.getElementById("result-form").style.display = "block";
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

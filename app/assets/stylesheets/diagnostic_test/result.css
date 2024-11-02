@@ -1,0 +1,37 @@
+body {
+  font-family: 'Arial', sans-serif; /* シンプルで読みやすいフォント */
+  background-color: #f4f8fa; /* 優しい青白い背景色 */
+  color: #333; /* コンテンツのテキスト色 */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  text-align: center;
+  margin-top: 80px; /* 上部に余白を持たせてコンテンツを中央に配置 */
+  flex: 1; /* フッターを固定するためのスペースを確保 */
+}
+
+.main-content h2 {
+  font-size: 2.5rem; /* 診断結果タイトルを大きく、強調 */
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.main-content p {
+  font-size: 1.2rem; /* 診断の内容を見やすく */
+  margin: 20px 0;
+}
+
+.main-content a {
+  color: #007bff; /* リンク色を明るめの青にして強調 */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.main-content a:hover {
+  text-decoration: underline; /* リンクにホバー時の効果 */
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>初回来店アンケート</title>
+  <link rel="stylesheet" href="/survey.css">
+</head>
+<body>
+  <form id="surveyForm">
+    <h1>初回来店アンケート</h1>
+
+    <!-- 質問 1 -->
+    <div>
+      <label for="howDidYouKnow">Q1. 当店をどのようにして知りましたか？</label><br>
+      <input type="radio" id="hotPepper" name="howDidYouKnow" value="ホットペッパービューティー">
+      <label for="hotPepper">ホットペッパービューティー</label><br>
+      <input type="radio" id="introduction" name="howDidYouKnow" value="紹介">
+      <label for="introduction">紹介</label><br>
+      <input type="radio" id="others" name="howDidYouKnow" value="その他">
+      <label for="others">その他</label>
+    </div>
+
+    <!-- 質問 2 -->
+    <div>
+      <label for="additionalMenu">Q2. 本日ご予約のメニューの他に気になるメニューがございますか？</label><br>
+      <input type="radio" id="interestedYes" name="additionalMenu" value="ある">
+      <label for="interestedYes">ある</label><br>
+      <input type="radio" id="interestedNo" name="additionalMenu" value="なし">
+      <label for="interestedNo">なし</label><br>
+      <input type="radio" id="interestedIfRecommended" name="additionalMenu" value="提案があればやりたい">
+      <label for="interestedIfRecommended">自分に合うメニューがあったらやりたい</label>
+    </div>
+
+    <!-- 質問 3 -->
+    <div>
+      <label for="budgetPreference">Q3. ご希望のスタイルに近づけるための予算などについて教えてください。</label><br>
+      <input type="radio" id="withinBudget" name="budgetPreference" value="予約の料金内でできる限り近づける">
+      <label for="withinBudget">予約の料金内でできる限り近づける</label><br>
+      <input type="radio" id="notConcerned" name="budgetPreference" value="予算は気にしないのでより良いメニューを教えて欲しい">
+      <label for="notConcerned">予算は気にしないのでより良いメニューを教えて欲しい</label><br>
+      <input type="radio" id="thinkAfterSuggestions" name="budgetPreference" value="提案を受けてから考えたい">
+      <label for="thinkAfterSuggestions">提案を受けてから考えたい</label>
+    </div>
+
+    <!-- 質問 4 -->
+    <div>
+      <label for="interactionPreference">Q4. 本日の施術中の接客について教えてください。</label><br>
+      <input type="radio" id="quiet" name="interactionPreference" value="静かに過ごしたい">
+      <label for="quiet">静かに過ごしたい</label><br>
+      <input type="radio" id="fun" name="interactionPreference" value="楽しく過ごしたい">
+      <label for="fun">楽しく過ごしたい</label><br>
+      <input type="radio" id="either" name="interactionPreference" value="どちらでも良い">
+      <label for="either">どちらでも良い</label>
+    </div>
+
+    <button type="submit">アンケートを提出する</button>
+  </form>
+
+  <script src="/survey.js" defer></script>
+</body>
+</html>
