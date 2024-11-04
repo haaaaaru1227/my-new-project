@@ -1,0 +1,29 @@
+services:
+  db:
+    image: mysql:8.0
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: hair_counseling_production
+      MYSQL_USER: my_app
+      MYSQL_PASSWORD: my_app_password
+
+  web:
+    build: .
+    command: bundle exec puma -C config/puma.rb
+    volumes:
+      - .:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      SECRET_KEY_BASE: "17d9e485c5e5ba8548e6998be028e73f4a1beee393a027211807ad7b485508f070b27604143309c7812d1ad8a2fa1257cb648ea99ae67fab6d2fe98d429209d2"
+      DATABASE_HOST: db
+      DATABASE_USER: my_app
+      DATABASE_PASSWORD: my_app_password
+
+volumes:
+  db_data:

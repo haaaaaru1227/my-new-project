@@ -3,8 +3,9 @@ default: &default
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: root
-  password: password1227
+  password: hana1227
   host: localhost
+  socket: /tmp/mysql.sock  # 通常は MySQL のソケットパスが `/tmp/mysql.sock` にあります。
 
 development:
   <<: *default
@@ -16,7 +17,7 @@ test:
 
 production:
   <<: *default
-  database: my-new-project
+  database: hair_counseling_production
   username: my_app
-  password: <%= ENV['MY_APP_DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
+  password: my_app_password
+  host: db

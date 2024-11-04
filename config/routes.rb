@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   # ホームページのルート
   root 'static_pages#home'
-
+  get 'home', to: 'static_pages#home'
   # 診断テスト関連のルート
   get 'diagnostic_test/select_gender', to: 'diagnostic_test#select_gender', as: 'select_gender'
   get 'diagnostic_test/man', to: 'diagnostic_test#man', as: 'diagnostic_test_man'
