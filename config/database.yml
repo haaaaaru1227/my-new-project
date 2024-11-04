@@ -5,7 +5,7 @@ default: &default
   username: root
   password: hana1227
   host: localhost
-  socket: /tmp/mysql.sock  # 通常は MySQL のソケットパスが `/tmp/mysql.sock` にあります。
+  socket: /var/lib/mysql/mysql.sock # 通常は MySQL のソケットパスが `/tmp/mysql.sock` にあります。
 
 development:
   <<: *default
