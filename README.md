@@ -38,7 +38,7 @@
      - API設計: `POST /api/style-diagnosis`: 顔型や髪質データを送信し、診断結果を取得
      参考: [Qiita記事](https://qiita.com/bstyle6130/items/c3dfebdceaaef8e3860d)
 
-3. **カウンセリングシート作成機能**
+3. **カウンセリングシート機能**
    - 顧客識別情報なしで、希望するスタイルや施術内容を入力することができます。
    - **使用技術**:
      - フロントエンド: HTML, CSS, jQuery
