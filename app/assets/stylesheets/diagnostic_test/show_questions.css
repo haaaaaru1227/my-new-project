@@ -1,0 +1,38 @@
+/* show_questions.css */
+/* 例：共通スタイル */
+body {
+  text-align: center;
+  background-color: #f5f5f5;
+}
+
+h1, h2 {
+  color: #5a92be;
+  font-size: 1.5em;
+}
+
+button {
+  background-color: #5a92be;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #4a82a5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* 黒い丸（リストのスタイル）を消す */
+ul {
+  list-style-type: none; /* リストスタイルを消す */
+  padding: 0; /* 内側の余白を削除 */
+  margin: 0; /* 外側の余白を削除 */
+}

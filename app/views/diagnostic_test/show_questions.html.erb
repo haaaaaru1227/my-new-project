@@ -4,102 +4,33 @@
   <title>質問に答えてください</title>
   <meta charset="utf-8">
   <%= csrf_meta_tags %>
-  <%= stylesheet_link_tag 'diagnostic_test/style', media: 'all' %>
+  
+  <%= javascript_include_tag 'diagnostic_test' %>
+  <%= stylesheet_link_tag 'diagnostic_test/show_questions', media: 'all' %>
 </head>
 <body>
   <main>
-    <h1>当てはまる方を選択してください！</h1>
-    <div id="question-box">
-      <% @questions.each_with_index do |question, index| %>
-        <div class="question" id="<%= question[:id] %>" <% if index != 0 %>style="display: none;"<% end %>>
-          <p><%= question[:text] %></p>
-          <ul>
-           <% question[:options].each do |option| %>
-  <li>
-    <button class="btn" data-question-id="<%= question[:id] %>" data-answer="<%= option[:text] %>" data-group="<%= option[:group] %>">
-      <%= option[:text] %> <!-- ここでテキストのみを表示 -->
-    </button>
-  </li>
-<% end %>
-
-          </ul>
-        </div>
-      <% end %>
+    <div id="surveyContainer"> <!-- フォームの代わりにdivを使用 -->
+      <h1>当てはまる方を選択してください！</h1>
+      <div id="question-box">
+        <% @questions.each_with_index do |question, index| %>
+          <div class="question" id="<%= question[:id] %>" <% if index != 0 %>style="display: none;"<% end %>>
+            <p><%= question[:text] %></p>
+            <ul>
+              <% question[:options].each do |option| %>
+                <li>
+                  <button type="button" class="btn" data-question-id="<%= question[:id] %>" data-answer="<%= option[:text] %>" data-group="<%= option[:group] %>">
+                    <%= option[:text] %>
+                  </button>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
     </div>
   </main>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-  var currentIndex = 0;
-  var questions = document.querySelectorAll('.question');
-  var answers = {};  // ユーザーの回答を保存するオブジェクト
-  var countA = 0;
-  var countB = 0;
-  var buttons = document.querySelectorAll('.btn');
-
-  // URLから髪の長さを取得する関数
-  function getHairLengthFromURL() {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('hair_length');
-  }
-
-  // 髪の長さを取得
-  var hairLength = getHairLengthFromURL();
-  console.log('hairLength:', hairLength);  // 髪の長さを表示
-
-  buttons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      var questionId = this.getAttribute('data-question-id');
-      var answer = this.getAttribute('data-answer');
-      var group = this.getAttribute('data-group');  // `data-group` からグループを取得
-      
-      // 回答を保存
-      answers[questionId] = answer;
-
-      // AかBをカウント
-      if (group === 'A') {
-        countA++;
-      } else if (group === 'B') {
-        countB++;
-      }
-
-      // 現在の質問を非表示
-      questions[currentIndex].style.display = 'none';
-      currentIndex++;
-
-      // 次の質問を表示、質問がなければ結果ページへ遷移
-      if (currentIndex < questions.length) {
-        questions[currentIndex].style.display = 'block';
-      } else {
-        // 回答をサーバーに送信して結果ページにリダイレクト
-        fetch('/diagnostic_test/result', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-          },
-          body: JSON.stringify({
-            hair_length: hairLength,
-            count_a: countA,
-            count_b: countB
-          })
-        })
-        .then(response => response.json())
-        .then(data => {
-          // サーバーからのレスポンスを確認
-          const url = `/diagnostic_test/result?title=${encodeURIComponent(data.title)}&message=${encodeURIComponent(data.message)}&hair_length=${encodeURIComponent(hairLength)}&count_a=${encodeURIComponent(countA)}&count_b=${encodeURIComponent(countB)}`;
-
-          // 結果ページにリダイレクト
-          window.location.href = url;
-        })
-        .catch(error => console.error('エラー:', error));
-      }
-    });
-  });
-});
-
-</script>
 
 </body>
 </html>

@@ -8,4 +8,4 @@
 //= link survey.js
 //= link survey.css
 //= link diagnostic_test/style.css
-
+//= link diagnostic_test/show_questions.css

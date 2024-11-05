@@ -22,11 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
   isLearningRadios.forEach(radio => radio.addEventListener('change', checkLearningStatus));
   wasLearningRadios.forEach(radio => radio.addEventListener('change', checkLearningStatus));
 
-  // フォームの送信時の処理
-  form.addEventListener('submit', function (event) {
-      event.preventDefault(); // ページリロードを防止
-      alert('アンケートを提出しました！ご協力ありがとうございます。');
-  });
 });
 
 

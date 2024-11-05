@@ -35,16 +35,17 @@ class DiagnosticTestController < ApplicationController
     end
   end
 
+ 
   def result
-    hair_length = params[:hair_length]  # パラメータで髪の長さを受け取る
+    hair_length = params[:hair_length]
     count_a = params[:count_a].to_i
     count_b = params[:count_b].to_i
   
-    puts "Received hair length in result: #{hair_length}"  # デバッグ用出力
-    puts "params[:hair_length]: #{params[:hair_length]}"
-  puts "params[:count_a]: #{params[:count_a]}"
-  puts "params[:count_b]: #{params[:count_b]}"
-
+    # デバッグ用ログ出力
+    puts "Received hair length in result: #{hair_length}"
+    puts "params[:count_a]: #{params[:count_a]}"
+    puts "params[:count_b]: #{params[:count_b]}"
+  
     @result_title, @result_message = generate_result(hair_length, count_a, count_b)
   
     respond_to do |format|

@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   get 'diagnostic_test/result', to: 'diagnostic_test#result', as: 'diagnostic_test_result'
   get 'survey', to: 'static_pages#survey', as: 'survey'
 
+  get '/favicon.ico', to: redirect('/assets/favicon.ico')
+
 
   post 'diagnostic_test/result', to: 'diagnostic_test#result'  # POST リクエスト用
   
