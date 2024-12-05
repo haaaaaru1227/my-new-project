@@ -1,7 +1,0 @@
-[submodule "alpinehelloworld"]
-    path = alpinehelloworld
-    url = https://github.com/haaaaaru1227/my-new-project.git
-[submodule "alpinehelloworld/my-new-project"]
-    path = alpinehelloworld/my-new-project
-    url = https://github.com/haaaaaru1227/my-new-project.git
-
