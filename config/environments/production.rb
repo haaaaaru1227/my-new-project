@@ -30,7 +30,8 @@ Rails.application.configure do
   config.assets.compile = false
   config.assets.debug = true
   config.assets.compile = true
-  
+  config.assets.js_compressor = :terser
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 

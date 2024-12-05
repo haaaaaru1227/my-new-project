@@ -1,5 +1,6 @@
-import { Turbo } from "@hotwired/turbo-rails"
-Turbo.start()
+import "@hotwired/turbo-rails";
+import { Application } from "@hotwired/stimulus";
+import HelloController from "./controllers/hello_controller";
 
-// Controllers (必要であれば追加)
-import "controllers"
+const application = Application.start();
+application.register("hello", HelloController);
