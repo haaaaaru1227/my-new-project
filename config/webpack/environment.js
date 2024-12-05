@@ -1,3 +1,6 @@
-const { environment } = require('@rails/webpacker')
+const { environment } = require('@rails/webpacker');
+const babelLoader = require('./loaders/babel'); // Babel ローダーの読み込み
 
-module.exports = environment
+environment.loaders.append('babel', babelLoader);
+
+module.exports = environment;
