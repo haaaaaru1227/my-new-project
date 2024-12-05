@@ -1,0 +1,3 @@
+[submodule "alpinehelloworld"]
+    path = alpinehelloworld
+    url = https://github.com/haaaaaru1227/my-new-project.git
