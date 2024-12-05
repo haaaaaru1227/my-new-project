@@ -1,6 +1,5 @@
-const { environment } = require('@rails/webpacker');
+process.env.NODE_ENV = process.env.NODE_ENV || 'production'
 
-// nodeの設定を削除する
-delete environment.config.node;
+const environment = require('./environment')
 
-module.exports = environment.toWebpackConfig();
+module.exports = environment.toWebpackConfig()
